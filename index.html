@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Tracker App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 style="font-weight: 400; font-size: 70px">Note Taker</h1>
+        <h4
+          style="
+            color: #2ecc71;
+            font-weight: 400;
+            font-size: 30px;
+            margin: 10px 0 30px 0;
+          "
+        >
+          Add A New Note:
+        </h4>
+      </header>
+
+      <div class="form">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12 note">
+              <label for="note" id="note" style="margin-right: 10px"
+                >Note:</label
+              >
+              <textarea
+                name="txt"
+                id="txt"
+                cols="100"
+                rows="3"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12 text-center">
+              <div class="bttn">
+                <button
+                  style="
+                    padding: 10px 20px;
+                    font-size: 15px;
+                    border-radius: 10px;
+                    margin: 30px 0;
+                    background-color: #2ecc71;
+                    color: #fff;
+                  "
+                  id="submit"
+                  class="btn"
+                  onclick="addNote()"
+                >
+                  Add Note
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-row addNote">
+            <div class="col-md-6 paren">
+              <p class="empty">No note is added yet!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-container">
+        <div class="popup-content">
+          <button class="close">&times;</button>
+        </div>
+
+        <div class="overlay"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
